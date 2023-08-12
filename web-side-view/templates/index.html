@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+    <title>chatBot</title>
+    <style>
+      #chatbot{
+        display: {% if qnas|length == 0 %}none{% else %}flex{% endif %};
+        
+      }
+     
+    </style>
+    <script>
+      // Scroll the container to the bottom
+      const container = document.getElementById('Top');
+      container.scrollTop = container.scrollHeight;
+  
+  
+    </script>
+  </head>
+  <body>
+    <div class="contaner">
+    <div id="chatbot" >
+      
+        <div  class="top qnas" id="Top" >
+          {% if qnas|length == 0 %}
+          <div class="welcome">
+                      <h1>Welcome! Ask Your Question </h1>
+          </div>
+          {% else %}
+          
+          {% for item in qnas %}
+          <div class="question">{{item[0]}} </div>
+          <div class="ans">{{item[1]}} </div>
+     
+          {% endfor %}
+          {% endif %}
+        </div>
+
+        <div class="ask-question">
+          <form method="post" action="/chat">
+          
+                  
+               <input type="text" name="question" placeholder="Enter your massage"/>
+            
+          
+           
+              <button type="submit">
+            <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="currentColor" d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"></path></svg>
+          </button>
+
+         
+        </form>
+        </div>
+    </div>
+
+
+    <div class="chatbutton">    <button onclick="showDiv()">Chat WIth Us</button></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </div>
+  </body>
+  
+
+</html>

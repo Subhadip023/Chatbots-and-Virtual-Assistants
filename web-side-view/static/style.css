@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+}
+.contaner{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Chatbot part start */
+#chatbot{
+    margin: auto;
+    color: aqua;
+    background-color: #21032b;
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    width: 70vw;
+    height: 60vh;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question{
+    display:inline-block;
+    background-color: cadetblue;
+    border-radius: 10px;
+    margin-right: 50vw;
+
+    margin: 10px;
+    padding: 10px;
+}
+.welcome {
+    padding-top: 100px;
+    text-align: center;
+}
+.ans{
+    display: inline-flex;
+    background-color: rgb(109, 93, 167);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 25vw;
+}
+
+.ask-question{
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.ask-question input{
+    background:transparent;
+    height: 35px;
+    width: 50vw;
+}
+.qnas{
+    overflow: auto;
+    scrollbar-color: #d4aa70 ;
+
+}
+.qnas::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .qnas::-webkit-scrollbar-track {
+    background-color:transparent;
+    border-radius: 100px;
+  }
+  
+  .qnas::-webkit-scrollbar-thumb {
+    background-color:#4f0a66;
+    border-radius:200px;  }
+
+ 
+.chatbutton{
+    width: 100vw;
+    display: flex;
+    justify-content: right;
+    position:fixed;
+    bottom: 100px;
+    height: 50px;
+
+}
+.chatbutton button{
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    margin-right:50px;
+    color:bisque;
+    background: #21032b;
+    
+}
+
+.chatbutton button:hover{
+    color: aqua;
+    height: 42px;
+    width: 105px;
+    background:gray;
+}   
+
+    /* Chatbot part end */
